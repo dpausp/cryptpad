@@ -68,14 +68,14 @@ define([
             'cp-settings-drive-import-local',
             'cp-settings-drive-reset'
         ],
-        'pad': [
-            'cp-settings-pad-width',
-        ],
-        'code': [
-            'cp-settings-code-indent-unit',
-            'cp-settings-code-indent-type',
-            'cp-settings-code-font-size',
-        ],
+        // 'pad': [
+        //     'cp-settings-pad-width',
+        // ],
+        // 'code': [
+        //     'cp-settings-code-indent-unit',
+        //     'cp-settings-code-indent-type',
+        //     'cp-settings-code-font-size',
+        // ],
         'subscription': {
             onClick: function () {
                 var urls = common.getMetadataMgr().getPrivateData().accounts;
