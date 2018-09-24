@@ -427,12 +427,22 @@ var getTotalSize = function (Env, publicKey, cb) {
         var count = channels.length;
         if (!count) { cb(void 0, 0); }
 
+        console.log("getTotalSize:")
         channels.forEach(function (channel) {
-            getFileSize(Env, channel, function (e, size) {
+            // XXX: we assume here that pad channels IDs have a certain length that is different from a blob ID.
+            // Is it OK? Is there a better way?
+            if (channel.length == 'f094bd8d6efa302462758c03dfeff114'.length) {
                 count--;
-                if (!e) { bytes += size; }
+                console.log("ignoring size of pad", channel);
                 if (count === 0) { return cb(void 0, bytes); }
-            });
+            } else {
+                getFileSize(Env, channel, function (e, size) {
+                    console.log("size for blob", channel, ":", size);
+                    count--;
+                    if (!e) { bytes += size; }
+                    if (count === 0) { return cb(void 0, bytes); }
+                });
+            }
         });
     });
 };
