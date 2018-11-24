@@ -1,14 +1,7 @@
 (function () {
 // add your module to this map so it gets used
 var map = {
-    'fr': 'Français',
-    'es': 'Español',
-    'pl': 'Polski',
-    'de': 'Deutsch',
-    'pt-br': 'Português do Brasil',
-    'ro': 'Română',
-    'zh': '繁體中文',
-    'el': 'Ελληνικά',
+    'de': 'Deutsch'
 };
 
 var messages = {};
@@ -21,7 +14,7 @@ var getLanguage = messages._getLanguage = function () {
     var l = getBrowserLanguage();
     // Edge returns 'fr-FR' --> transform it to 'fr' and check again
     return map[l] ? l :
-            (map[l.split('-')[0]] ? l.split('-')[0] : 'en');
+            (map[l.split('-')[0]] ? l.split('-')[0] : 'de');
 };
 var language = getLanguage();
 
