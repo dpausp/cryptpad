@@ -36,6 +36,9 @@ define(['/common/translations/messages.de.js'], function (Messages) {
     // tos
     out.tos_content = '<h1 id="tos">Nutzungsbedingungen</h1>';
 
+    delete out.faq.other;
+    delete out.faq.usability.feature;
+
     return Messages;
 });
 
