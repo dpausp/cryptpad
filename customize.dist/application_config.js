@@ -6,5 +6,13 @@
    but you should not change it directly (/common/application_config_internal.js)
 */
 define(['/common/application_config_internal.js'], function (AppConfig) {
-    return AppConfig;
+    console.log('loading config');
+    console.log(AppConfig);
+    config = AppConfig;
+    config.availablePadTypes = ['drive', 'code', 'poll', 'file'];
+    config.registeredOnlyTypes = ['file'];
+    config.disableUserlistNotifications = true;
+    config.disableFeedback = true;
+    config.disableAnonymousStore = false;
+    return config;
 });
