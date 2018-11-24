@@ -69,25 +69,18 @@ define([
                         ])
                     ], ''),
                     footerCol('footer_applications', [
-                        footLink('/drive/', 'main_drive'),
-                        footLink('/pad/', 'main_richText'),
                         footLink('/code/', 'main_code'),
-                        footLink('/slide/', 'main_slide'),
+                        footLink('/drive/', 'main_drive'),
                         footLink('/poll/', 'main_poll'),
-                        footLink('/kanban/', 'main_kanban'),
-                        footLink('/whiteboard/', null, Msg.type.whiteboard)
                     ]),
                     footerCol('footer_aboutUs', [
-                        footLink('https://blog.cryptpad.fr', 'blog'),
-                        footLink('https://labs.xwiki.com', null, 'XWiki Labs'),
-                        footLink('http://www.xwiki.com', null, 'XWiki SAS'),
-                        footLink('https://www.open-paas.org', null, 'OpenPaaS')
+                        footLink('https://piratenpartei.de', null, 'Piratenpartei Deutschland'),
+                        footLink('https://blog.cryptpad.fr', null, 'Cryptpad Blog')
                     ]),
                     footerCol('footer_contact', [
-                        footLink('https://riot.im/app/#/room/#cryptpad:matrix.org', null, 'Chat'),
-                        footLink('https://twitter.com/cryptpad', null, 'Twitter'),
-                        footLink('https://github.com/xwiki-labs/cryptpad', null, 'GitHub'),
-                        footLink('/contact.html', null, 'Email')
+                        footLink('https://riot.im/app/#/room/#cryptpad:matrix.org', null, 'Cryptpad Matrix-Chat'),
+                        footLink('https://twitter.com/cryptpad', null, 'Cryptpad @ Twitter'),
+                        footLink('https://github.com/xwiki-labs/cryptpad', null, 'Code @ GitHub')
                     ])
                 ])
             ]),
