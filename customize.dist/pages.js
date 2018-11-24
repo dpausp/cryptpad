@@ -128,8 +128,7 @@ define([
                 h('a.nav-item.nav-link', { href: '/terms.html'}, Msg.terms),
                 h('a.nav-item.nav-link', { href: '/about.html'}, Msg.imprint),
                 h('a.nav-item.nav-link', { href: '/privacy.html'}, Msg.privacy),
-                h('a.nav-item.nav-link', { href: '/faq.html'}, Msg.faq_link),
-                h('a.nav-item.nav-link', { href: '/features.html'}, Msg.features),
+                h('a.nav-item.nav-link', { href: '/faq.html'}, Msg.faq_link)
             ].concat(rightLinks))
         );
     };
